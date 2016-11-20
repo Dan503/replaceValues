@@ -101,4 +101,4 @@ After including that line, you can use it in the same ways that I have used it a
 
 ##Developers
 
-When publishing, use the [babel-it](https://github.com/IonicaBizau/babel-it) npm plugin to to convert the js files into es5 syntax for better environment support.
+If using any ES6 syntax, use the [babel-it](https://github.com/IonicaBizau/babel-it) npm plugin just before publishing to convert the js files into eES5 syntax for better environment support.
