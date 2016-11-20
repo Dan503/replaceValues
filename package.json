@@ -1,0 +1,23 @@
+{
+  "name": "replace-values",
+  "version": "1.0.0",
+  "description": "A function for surgically replacing values in an object.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dan503/replaceValues.git"
+  },
+  "keywords": [
+    "replace",
+    "object",
+    "js",
+    "pug",
+    "jade"
+  ],
+  "author": "Daniel Tonon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dan503/replaceValues/issues"
+  },
+  "homepage": "https://github.com/Dan503/replaceValues#readme"
+}
