@@ -26,8 +26,6 @@ var example = {
 replaceValues(example, {
     two: 'two',
 });
-
-//example now equals { one: 1, two: 'two', three: 3}
 `````
 
 In this case `example` would now equal this:
