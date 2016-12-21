@@ -1,6 +1,6 @@
 {
   "name": "replace-values",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A function for surgically replacing values in an object.",
   "main": "index.js",
   "repository": {
