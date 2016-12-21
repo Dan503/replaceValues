@@ -8,11 +8,11 @@ npm install replace-values --save
 
 This function is essentially the opposite of my [defaultTo](https://www.npmjs.com/package/default-to) function.
 
-##JS Usage
+## JS Usage
 
 This is how you would use it in a javascript file
 
-###Single level
+### Single level
 
 `````js
 var replaceValues = require('replace-values');
@@ -23,7 +23,7 @@ var example = {
     three: 3
 };
 
-example = replaceValues(example, {
+replaceValues(example, {
     two: 'two',
 });
 
@@ -40,7 +40,25 @@ In this case `example` would now equal this:
 }
 `````
 
-###Nested
+#### alternate syntax
+
+This syntax still works since the function returns with the new object:
+
+````````````js
+var example = {
+    one: 1,
+    two : 2,
+    three: 3
+};
+
+example = replaceValues(example, {
+    two: 'two',
+});
+
+// example = { one: 1, two: 'two', three: 3 }
+````````````
+
+### Nested
 
 The function can also replace nested values
 
@@ -56,7 +74,7 @@ var example = {
     three: 3
 };
 
-example = replaceValues(example, {
+replaceValues(example, {
     two: { a : 'zzz'},
 });
 `````
@@ -74,7 +92,29 @@ In this case `example` would now equal this:
 }
 `````
 
-##Pug and Jade usage
+### Replace parsed values using functions
+
+`````js
+var replaceValues = require('replace-values');
+
+var example = {
+    one: 1,
+    two : 2,
+    three: 3
+};
+
+function replacementFunction(object){
+    replaceValues(object, {
+        two: 'two',
+    });
+}
+
+replacementFunction(example);
+
+//example = { one: 1, two : 'two', three: 3 };
+`````
+
+## Pug and Jade usage
 
 This npm package also comes with [Pug and Jade](https://pugjs.org/api/getting-started.html) versions of the function. To use the function in your pug/jade templates add this to the top of your base pug/jade file:
 
@@ -99,6 +139,7 @@ After including that line, you can use it in the same ways that I have used it a
     })
 ``````
 
-##Developers
+
+## Developers
 
 If using any ES6 syntax, use the [babel-it](https://github.com/IonicaBizau/babel-it) npm plugin just before publishing to convert the js files into eES5 syntax for better environment support.
